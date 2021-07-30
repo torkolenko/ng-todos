@@ -1,0 +1,16 @@
+.checkTodo {
+  margin-right: 15px;
+}
+
+.todo {
+  font-size: 1.1em;
+  color: var(--gray-color);
+
+  &.notChecked {
+    text-decoration: none;
+  }
+
+  &.isChecked {
+    text-decoration: line-through;
+  }
+}

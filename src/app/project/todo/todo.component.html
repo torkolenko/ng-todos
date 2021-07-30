@@ -1,0 +1,8 @@
+<mat-checkbox class = "checkTodo" 
+  [checked] = "todo.isCompleted" 
+  (click) = callPatchOne(todo.project_id,todo.id)></mat-checkbox>
+
+<p class = "todo"  [ngClass]= "{
+  isChecked: todo.isCompleted === true,
+  notChecked: todo.isCompleted === false
+  }" >{{todo.text}}</p>

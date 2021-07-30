@@ -1,0 +1,35 @@
+<mat-card>       
+  <mat-card-header class = "fieldFormHeader">
+    <mat-card-title>Новая задача</mat-card-title>
+  </mat-card-header>
+        
+  <hr class = "hr">
+        
+  <mat-card-content class = "fieldContentForm">
+    <form [formGroup]="form">
+                
+      <mat-form-field class = "widthElements" appearance = "fill" >
+        <mat-label>Название задачи...</mat-label> 
+          <input matInput #todoText type = "text" formControlName = "text" [value]>
+      </mat-form-field>
+                
+      <mat-form-field class = "widthElements" appearance = "fill">
+        <mat-label>Категория</mat-label>
+          <mat-select formControlName = "title" #selectProject (selectionChange) = changeValueInput(selectProject.value)>
+            <mat-option *ngFor = "let iterProject of projects trackBy: trackByPrj" [value] = "iterProject.id">{{iterProject.title}}</mat-option>
+            <mat-option [value] = 0>Создать категорию</mat-option>
+          </mat-select>
+      </mat-form-field>
+                
+      <mat-form-field class = "widthElements" appearance = "fill" [ngStyle] = "{visibility: selectedValue}">
+        <mat-label>Название категории...</mat-label> 
+        <input matInput #newCategory formControlName="new_title" [value]>
+      </mat-form-field>
+                
+      <button mat-flat-button class = "cancelButton" (click) = "onNoClick()">ОТМЕНА</button>
+                
+      <button mat-flat-button class="submitButton" (click) = callPutOne(selectProject.value,todoText.value,newCategory.value)>ОК</button>
+
+    </form>
+  </mat-card-content>
+</mat-card>

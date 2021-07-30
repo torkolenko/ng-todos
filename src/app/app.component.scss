@@ -1,0 +1,35 @@
+.containerHeader {
+  background-color: var(--blue-color);
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.titleHeader {
+  color: white;
+  font-size: 1.2em;
+  position: absolute;
+  margin-left: 0; 
+}
+
+.buttonHeader {
+  position: relative;
+  right: 15px;
+  margin-left: auto; 
+}
+
+.iconButtonHeader {
+  color: white;
+}
+
+.field {
+  min-height: 720px;
+  padding: 37px 7px 7px 37px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background: var(--field-color);
+}

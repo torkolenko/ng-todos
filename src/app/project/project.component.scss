@@ -1,0 +1,28 @@
+.todoCard {
+  width: 382px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.fieldHeaderCard {
+  margin-left: -16px;
+  height: 1.7em;
+  font-size: 0.7em;
+}
+
+.contentHeaderCard {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.fieldContentCard {
+  margin-left: 6px;
+  padding-top: 20px;
+  padding-right: 12px;
+}
+
+.contentCard {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}

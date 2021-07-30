@@ -1,0 +1,15 @@
+<div *ngFor = "let iterProject of projects; trackBy: trackByPrj">
+  <mat-card class= "todoCard">
+  <mat-card-header class = "fieldHeaderCard">
+    <mat-card-title class = "contentHeaderCard">{{iterProject.title}}</mat-card-title>
+  </mat-card-header>
+
+  <hr class = "hr">
+  
+  <mat-card-content class = "fieldContentCard">
+    <app-todo class = "contentCard" 
+      *ngFor = "let iterTodo of iterProject.todos; ; trackBy: trackByTodo"
+      [todo] = "iterTodo"></app-todo>
+  </mat-card-content>
+  </mat-card>
+</div>
