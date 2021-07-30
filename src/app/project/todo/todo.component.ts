@@ -26,7 +26,6 @@ export class TodoComponent {
     
     this._requestsService.patchOne( cardID, todoID ).subscribe( data => {
         data = plainToClass(Todo, data);
-        console.log(data);
         this._dataService.updateTodo(data as Todo);
     })
   }
