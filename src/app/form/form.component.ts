@@ -73,10 +73,8 @@ export class FormComponent implements OnInit {
       alert( "Введите текст задачи" );
     
     } else {
-    
-      let title: string | undefined = ( projectId === 0 ) ? titleNewCategory : this.projects.find( item => item.id === projectId )?.title;
       
-      this._requestsservice.putOne( projectId, title, textTodo ).subscribe( response => {
+      this._requestsservice.putOne( projectId, titleNewCategory, textTodo ).subscribe( response => {
         if ( projectId === 0 ) {
           response = plainToClass(Project, response);
           this._dataService.addProject(response as Project);
