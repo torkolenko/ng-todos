@@ -21,8 +21,8 @@ export class RequestsService {
     return this.myHttp.patch( `${this.getUrl}/${cardID}/todo/${todoID}`, options );
   }
 
-  putOne( id:string | number, titleCategory:string | undefined, textTodo:string ) {
-    const options = { "id": id, "title": titleCategory, "text": textTodo };
+  putOne( id:string | number, title:string, textTodo:string ) {
+    const options = { "id": id, "title": title, "text": textTodo };
     return this.myHttp.post( this.postUrl, options );
   }
 }
