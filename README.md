@@ -1,4 +1,4 @@
-<h1 align="center">TodosManeger</h1>
+<h1 align="center">TodosManager</h1>
 
 ## Description
 
